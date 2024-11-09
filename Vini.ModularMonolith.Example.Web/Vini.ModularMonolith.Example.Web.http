@@ -1,0 +1,6 @@
+@Vini.ModularMonolith.Example.Web_HostAddress = http://localhost:5074
+
+GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
