@@ -1,5 +1,5 @@
 ﻿using FastEndpoints;
-
+using Scalar.AspNetCore;
 using Vini.ModularMonolith.Example.Books;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +13,7 @@ var app = builder.Build();
 {
   if (app.Environment.IsDevelopment())
   {
+    app.MapScalarApiReference();
     app.MapOpenApi();
   }
 

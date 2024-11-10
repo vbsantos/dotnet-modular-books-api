@@ -3,6 +3,7 @@
   <ItemGroup>
     <PackageReference Include="FastEndpoints" Version="5.31.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.2.24474.3" />
+    <PackageReference Include="Scalar.AspNetCore" Version="1.2.34" />
   </ItemGroup>
 
   <ItemGroup>
