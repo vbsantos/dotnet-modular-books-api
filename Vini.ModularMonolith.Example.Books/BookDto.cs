@@ -1,5 +1,3 @@
 ﻿namespace Vini.ModularMonolith.Example.Books;
 
-public class BookDto
-{
-}
+internal record BookDto(Guid Id, string Title, string Author);
