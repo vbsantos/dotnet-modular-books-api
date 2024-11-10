@@ -1,9 +1,11 @@
+using FastEndpoints;
+
 using Vini.ModularMonolith.Example.Books;
 
 var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services.AddOpenApi();
-
+    builder.Services.AddFastEndpoints();
     builder.Services.AddBookService();
 }
 
@@ -16,7 +18,7 @@ var app = builder.Build();
 
     app.UseHttpsRedirection();
 
-    app.MapBooksEndpoints();
+    app.UseFastEndpoints();
 
     app.Run();
 }
