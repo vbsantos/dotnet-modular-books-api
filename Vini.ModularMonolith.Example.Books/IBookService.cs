@@ -2,5 +2,5 @@
 
 internal interface IBookService
 {
-    List<BookDto> ListBooks();
+  List<BookDto> ListBooks();
 }
