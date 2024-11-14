@@ -1,12 +1,16 @@
 ﻿using FastEndpoints;
 using Scalar.AspNetCore;
 using Vini.ModularMonolith.Example.Books;
+using Vini.ModularMonolith.Example.Users;
 
 var builder = WebApplication.CreateBuilder(args);
 {
   builder.Services.AddOpenApi();
   builder.Services.AddFastEndpoints();
-  builder.Services.AddBookService();
+
+  // Module Services
+  builder.Services.AddBookService(builder.Configuration);
+  builder.Services.AddUserService(builder.Configuration);
 }
 
 var app = builder.Build();
@@ -23,3 +27,5 @@ var app = builder.Build();
 
   app.Run();
 }
+
+public partial class Program { } // Required for Tests

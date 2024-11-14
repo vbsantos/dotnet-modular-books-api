@@ -4,3 +4,38 @@ GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/books/
 Accept: application/json
 
 ###
+
+@BookId = e4fa19bf-6981-4e50-a542-7c9b26e9ec31
+
+GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/books/{{BookId}}
+Accept: application/json
+
+###
+
+POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/books
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "bda13026-666e-425a-8cf2-5ceabfc8aea6",
+  "title": "Wheel Of Time: The Eye of the World",
+  "author": "Robert Jordan",
+  "price": 13.15
+}
+
+###
+
+DELETE {{Vini.ModularMonolith.Example.Web_HostAddress}}/books/bda13026-666e-425a-8cf2-5ceabfc8aea6
+Accept: application/json
+
+###
+
+POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/books/bda13026-666e-425a-8cf2-5ceabfc8aea6/pricehistory
+Accept: application/json
+Content-Type: application/json
+
+{
+  "NewPrice": 10.15
+}
+
+###
