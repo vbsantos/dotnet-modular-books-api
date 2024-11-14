@@ -7,6 +7,7 @@ This is a learning project aimed at understanding the principles and implementat
 - [.NET 9](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview)
 - [FastEndpoints](https://fast-endpoints.com/): An alternative to minimal APIs
 - [Scalar](https://scalar.com/): An alternative to Swagger
+- [xUnit](https://xunit.net/): A testing framework for .NET
 
 ## Modules
 
