@@ -1,4 +1,4 @@
-@Vini.ModularMonolith.Example.Web_HostAddress = http://localhost:5074
+@Vini.ModularMonolith.Example.Web_HostAddress = https://localhost:7018
 
 GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/books/
 Accept: application/json
@@ -37,5 +37,46 @@ Content-Type: application/json
 {
   "NewPrice": 10.15
 }
+
+###
+
+POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "vbsanttos@gmail.com",
+  "password": "Pass@word1"
+}
+
+###
+
+POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/users/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "vbsanttos@gmail.com",
+  "password": "Pass@word1"
+}
+
+###
+
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzE4MjEyMTUsIkVtYWlsQWRkcmVzcyI6InZic2FudHRvc0BnbWFpbC5jb20iLCJleHAiOjE3MzE4MjQ4MTUsIm5iZiI6MTczMTgyMTIxNX0.RA4UZlYN423ANysRnG3VPytx73jZmz0NV28YdlG__Dk
+
+POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/cart
+Accept: text/plain
+Authorization: Bearer {{token}}
+Content-Type: application/json 
+{
+  "bookId": "bda13026-666e-425a-8cf2-5ceabfc8aea6",
+  "quantity": 1
+}
+
+###
+
+GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/cart
+Accept: application/json
+Authorization: Bearer {{token}}
 
 ###

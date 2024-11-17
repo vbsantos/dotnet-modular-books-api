@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Vini.ModularMonolith.Example.Users;
+namespace Vini.ModularMonolith.Example.Users.Data;
 
 internal class UsersDbContext : IdentityDbContext
 {

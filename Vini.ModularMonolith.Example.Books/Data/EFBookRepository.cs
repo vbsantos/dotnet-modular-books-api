@@ -2,11 +2,11 @@
 
 namespace Vini.ModularMonolith.Example.Books.Data;
 
-internal class EFBookRepository : IBookRepository
+public class EFBookRepository : IBookRepository
 {
-  private readonly BookDbContext _dbContext;
+  private readonly BooksDbContext _dbContext;
 
-  public EFBookRepository(BookDbContext dbContext)
+  public EFBookRepository(BooksDbContext dbContext)
   {
     _dbContext = dbContext;
   }

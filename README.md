@@ -19,6 +19,12 @@ To create the `Initial` migration go to the `Vini.ModularMonolith.Example.Web` d
 dotnet ef migrations add Initial -c BookDbContext -p ..\Vini.ModularMonolith.Example.Books\Vini.ModularMonolith.Example.Books.csproj -s .\Vini.ModularMonolith.Example.Web.csproj -o Data/Migrations
 ```
 
+To run the migrations
+
+```bash
+dotnet ef database update --context BookDbContext
+```
+
 ### Books.Tests
 
 To run migrations for the `appsettings.Testing.json` file, run this command:
@@ -32,5 +38,11 @@ dotnet ef database update -c BookDbContext -p Vini.ModularMonolith.Example.Web/V
 To create the `Initial` migration go to the `Vini.ModularMonolith.Example.Web` directory and this command:
 
 ```bash
-dotnet ef migrations add Initial -c UserDbContext -p ..\Vini.ModularMonolith.Example.Users\Vini.ModularMonolith.Example.Books.csproj -s .\Vini.ModularMonolith.Example.Web.csproj -o Data/Migrations
+dotnet ef migrations add Initial -c UserDbContext -p ..\Vini.ModularMonolith.Example.Users\Vini.ModularMonolith.Example.Users.csproj -s .\Vini.ModularMonolith.Example.Web.csproj -o Data/Migrations
+```
+
+To run the migrations
+
+```bash
+dotnet ef database update --context UserDbContext
 ```

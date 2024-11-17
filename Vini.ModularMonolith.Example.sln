@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users Module", "Users Modul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Example.Users", "Vini.ModularMonolith.Example.Users\Vini.ModularMonolith.Example.Users.csproj", "{BFEC76DE-A426-4D08-915A-115D1BE70A07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Example.Books.Contracts", "Vini.ModularMonolith.Example.Books.Contracts\Vini.ModularMonolith.Example.Books.Contracts.csproj", "{2DE0DB1B-D774-4E3E-B084-1BC85CA2351E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{BFEC76DE-A426-4D08-915A-115D1BE70A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFEC76DE-A426-4D08-915A-115D1BE70A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFEC76DE-A426-4D08-915A-115D1BE70A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE0DB1B-D774-4E3E-B084-1BC85CA2351E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE0DB1B-D774-4E3E-B084-1BC85CA2351E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE0DB1B-D774-4E3E-B084-1BC85CA2351E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE0DB1B-D774-4E3E-B084-1BC85CA2351E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{71735DBA-98E1-4672-8737-7D65E5FFB054} = {FA3F156E-249F-4AB0-9B2A-8C1E2839F50C}
 		{5EA8A40A-B553-4839-8115-30EC66664F2C} = {FA3F156E-249F-4AB0-9B2A-8C1E2839F50C}
 		{BFEC76DE-A426-4D08-915A-115D1BE70A07} = {EA9837AC-05B4-433C-BD73-55DED6D62B04}
+		{2DE0DB1B-D774-4E3E-B084-1BC85CA2351E} = {FA3F156E-249F-4AB0-9B2A-8C1E2839F50C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC4A341-B489-48BE-8C7C-34BC0DAFB1B5}

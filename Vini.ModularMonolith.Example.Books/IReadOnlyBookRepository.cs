@@ -1,6 +1,6 @@
 ﻿namespace Vini.ModularMonolith.Example.Books;
 
-internal interface IReadOnlyBookRepository
+public interface IReadOnlyBookRepository
 {
   Task<Book?> GetByIdAsync(Guid id);
   Task<List<Book>> ListAsync();

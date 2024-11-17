@@ -2,7 +2,7 @@
 
 namespace Vini.ModularMonolith.Example.Books;
 
-internal class Book
+public class Book
 {
   public Guid Id { get; private set; } = Guid.NewGuid();
   public string Title { get; private set; } = string.Empty;
@@ -17,5 +17,5 @@ internal class Book
     Price = Guard.Against.Negative(price);
   }
 
-  internal void UpdatePrice(decimal newPrice) => Price = Guard.Against.Negative(newPrice);
+  public void UpdatePrice(decimal newPrice) => Price = Guard.Against.Negative(newPrice);
 }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Vini.ModularMonolith.Example.Books.Data.Migrations
 {
-  [DbContext(typeof(BookDbContext))]
+  [DbContext(typeof(BooksDbContext))]
     [Migration("20241111184427_Initial")]
     partial class Initial
     {

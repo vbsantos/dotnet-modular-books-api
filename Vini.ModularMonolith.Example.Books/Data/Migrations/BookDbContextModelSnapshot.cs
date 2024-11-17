@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Vini.ModularMonolith.Example.Books.Data.Migrations
 {
-  [DbContext(typeof(BookDbContext))]
+  [DbContext(typeof(BooksDbContext))]
     partial class BookDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
