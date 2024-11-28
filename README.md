@@ -9,9 +9,10 @@ This is a learning project aimed at understanding the principles and implementat
 - [Scalar](https://scalar.com/): An alternative to Swagger
 - [xUnit](https://xunit.net/): A testing framework for .NET
 - [Serilog](https://serilog.net/): A diagnostic logging library for .NET
+- [MediatR](https://github.com/jbogard/MediatR): Simple mediator pattern implementation in .NET
 - [Ardalis.Result](https://github.com/ardalis/Result): A library for handling operation results
 - [Ardalis.GuardClauses](https://github.com/ardalis/GuardClauses): A library for guard clauses
-
+ 
 ## Modules
 
 ### Books
