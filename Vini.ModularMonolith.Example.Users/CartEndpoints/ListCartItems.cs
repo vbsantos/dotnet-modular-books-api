@@ -2,7 +2,7 @@
 using Ardalis.Result;
 using FastEndpoints;
 using MediatR;
-using Vini.ModularMonolith.Example.Users.UseCases;
+using Vini.ModularMonolith.Example.Users.UseCases.Cart.ListItems;
 
 namespace Vini.ModularMonolith.Example.Users.CartEndpoints;
 

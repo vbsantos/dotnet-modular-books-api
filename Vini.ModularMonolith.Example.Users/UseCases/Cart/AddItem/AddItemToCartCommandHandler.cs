@@ -2,7 +2,7 @@
 using MediatR;
 using Vini.ModularMonolith.Example.Books.Contracts;
 
-namespace Vini.ModularMonolith.Example.Users.UseCases;
+namespace Vini.ModularMonolith.Example.Users.UseCases.Cart.AddItem;
 
 public class AddItemToCartCommandHandler : IRequestHandler<AddItemToCartCommand, Result>
 {

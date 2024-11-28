@@ -2,39 +2,43 @@
 using Ardalis.Result;
 using FastEndpoints;
 using MediatR;
-using Vini.ModularMonolith.Example.Users.UseCases.Cart.AddItem;
+using Vini.ModularMonolith.Example.Users.UseCases.Cart.Checkout;
 
 namespace Vini.ModularMonolith.Example.Users.CartEndpoints;
 
-internal class AddItem : Endpoint<AddCartItemRequest>
+internal class Checkout : Endpoint<CheckoutRequest, CheckoutResponse>
 {
   private readonly IMediator _mediator;
 
-  public AddItem(IMediator mediator)
+  public Checkout(IMediator mediator)
   {
     _mediator = mediator;
   }
 
   public override void Configure()
   {
-    Post("/cart");
+    Post("/cart/checkout");
     Claims("EmailAddress");
   }
 
-  public override async Task HandleAsync(AddCartItemRequest req, CancellationToken ct)
+  public override async Task HandleAsync(CheckoutRequest req, CancellationToken ct)
   {
     var emailAddress = User.FindFirstValue("EmailAddress");
 
-    var command = new AddItemToCartCommand(req.BookId, req.Quantity, emailAddress!);
+    var command = new CheckoutCartCommand(
+      emailAddress!,
+      req.ShippingAddressId,
+      req.BillingAddressId);
 
     var result = await _mediator.Send(command, ct);
 
     if (result.Status == ResultStatus.Unauthorized)
     {
       await SendUnauthorizedAsync(ct);
-      return;
     }
-
-    await SendOkAsync(ct);
+    else
+    {
+      await SendOkAsync(new CheckoutResponse(result.Value), ct);
+    }
   }
 }

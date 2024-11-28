@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Vini.ModularMonolith.Example.OrderProcessing\Vini.ModularMonolith.Example.OrderProcessing.csproj" />
     <ProjectReference Include="..\Vini.ModularMonolith.Example.Books\Vini.ModularMonolith.Example.Books.csproj" />
     <ProjectReference Include="..\Vini.ModularMonolith.Example.Users\Vini.ModularMonolith.Example.Users.csproj" />
   </ItemGroup>

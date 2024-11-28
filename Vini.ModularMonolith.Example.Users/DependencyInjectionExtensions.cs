@@ -8,7 +8,7 @@ namespace Vini.ModularMonolith.Example.Users;
 
 public static class DependencyInjectionExtensions
 {
-  public static IServiceCollection AddUserService(
+  public static IServiceCollection AddUserModuleService(
     this IServiceCollection services,
     ConfigurationManager config,
     ILogger logger,
@@ -23,7 +23,7 @@ public static class DependencyInjectionExtensions
     services.AddIdentityCore<ApplicationUser>()
       .AddEntityFrameworkStores<UsersDbContext>();
 
-    services.AddScoped<IApplicationUserRepository, EfApplicationUserRepository>();
+    services.AddScoped<IApplicationUserRepository, EFApplicationUserRepository>();
 
     mediatRAssemblies.Add(typeof(DependencyInjectionExtensions).Assembly);
 

@@ -4,6 +4,7 @@ using FastEndpoints.Security;
 using Scalar.AspNetCore;
 using Serilog;
 using Vini.ModularMonolith.Example.Books;
+using Vini.ModularMonolith.Example.OrderProcessing;
 using Vini.ModularMonolith.Example.Users;
 
 var logger = Log.Logger = new LoggerConfiguration()
@@ -25,8 +26,9 @@ var builder = WebApplication.CreateBuilder(args);
 
   // Module Services
   List<Assembly> mediatRAssemblies = [typeof(Program).Assembly];
-  builder.Services.AddBookService(builder.Configuration, logger, mediatRAssemblies);
-  builder.Services.AddUserService(builder.Configuration, logger, mediatRAssemblies);
+  builder.Services.AddBookModuleService(builder.Configuration, logger, mediatRAssemblies);
+  builder.Services.AddUserModuleService(builder.Configuration, logger, mediatRAssemblies);
+  builder.Services.AddOrderProcessingModuleService(builder.Configuration, logger, mediatRAssemblies);
 
   // Set up MediatR
   builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies([.. mediatRAssemblies]));

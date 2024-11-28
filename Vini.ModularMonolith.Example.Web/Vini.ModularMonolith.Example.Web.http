@@ -62,7 +62,7 @@ Content-Type: application/json
 
 ###
 
-@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzE4MjEyMTUsIkVtYWlsQWRkcmVzcyI6InZic2FudHRvc0BnbWFpbC5jb20iLCJleHAiOjE3MzE4MjQ4MTUsIm5iZiI6MTczMTgyMTIxNX0.RA4UZlYN423ANysRnG3VPytx73jZmz0NV28YdlG__Dk
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzI4MTkzNzYsIkVtYWlsQWRkcmVzcyI6InZic2FudHRvc0BnbWFpbC5jb20iLCJleHAiOjE3MzI4MjI5NzYsIm5iZiI6MTczMjgxOTM3Nn0.wVXVvbijsok1v6VidCkZ8wKX4SZ-D0Ccrvxru-ipzR0
 
 POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/cart
 Accept: text/plain
@@ -78,5 +78,48 @@ Content-Type: application/json
 GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/cart
 Accept: application/json
 Authorization: Bearer {{token}}
+
+###
+
+# List All Orders
+GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/orders
+Accept: application/json
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+###
+
+# Checkout Cart
+POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/cart/checkout
+Accept: application/json 
+Authorization: Bearer {{token}}
+Content-Type: application/json 
+{
+  "billingAddress": "a827be92-0ffd-495d-aab7-b94c7d095f0f",
+  "shippingAddress": "a827be92-0ffd-495d-aab7-b94c7d095f0f"
+}
+
+###
+
+# List Addresses
+GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/users/addresses
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+
+# Add Address To User
+POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/users/addresses
+Accept: application/json 
+Authorization: Bearer {{token}}
+Content-Type: application/json 
+{
+  "street1": "123 Main St",
+  "street2": "Apt 4B",
+  "city": "Springfield",
+  "state": "IL",
+  "postalCode": "62701",
+  "country": "USA"
+}
 
 ###

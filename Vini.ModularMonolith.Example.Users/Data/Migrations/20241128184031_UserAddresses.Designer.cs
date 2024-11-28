@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vini.ModularMonolith.Example.Users.Data;
 
@@ -12,9 +13,11 @@ using Vini.ModularMonolith.Example.Users.Data;
 namespace Vini.ModularMonolith.Example.Users.Data.Migrations
 {
     [DbContext(typeof(UsersDbContext))]
-    partial class UserDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241128184031_UserAddresses")]
+    partial class UserAddresses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

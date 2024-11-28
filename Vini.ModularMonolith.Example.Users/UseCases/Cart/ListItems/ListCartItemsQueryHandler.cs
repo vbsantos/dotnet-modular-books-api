@@ -1,7 +1,7 @@
 ﻿using Ardalis.Result;
 using MediatR;
 
-namespace Vini.ModularMonolith.Example.Users.UseCases;
+namespace Vini.ModularMonolith.Example.Users.UseCases.Cart.ListItems;
 
 internal class ListCartItemsQueryHandler : IRequestHandler<ListCartItemsQuery, Result<List<CartItemDto>>>
 {
