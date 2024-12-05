@@ -18,11 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OrderProcessing.Contracts\OrderProcessing.Contracts.csproj" />
+    <ProjectReference Include="..\Users.Contracts\Users.Contracts.csproj" />
     <ProjectReference Include="..\Vini.ModularMonolith.Example.Books.Contracts\Vini.ModularMonolith.Example.Books.Contracts.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Integrations\" />
   </ItemGroup>
   
 </Project>

@@ -12,7 +12,7 @@ public class CartItem
     UnitPrice = Guard.Against.Negative(unitPrice);
   }
 
-  public Guid Id { get; private set; }
+  public Guid Id { get; private set; } = Guid.NewGuid();
   public Guid BookId { get; private set; }
   public string Description { get; set; } = string.Empty;
   public int Quantity { get; private set; }

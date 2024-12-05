@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Exampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing.Contracts", "OrderProcessing.Contracts\OrderProcessing.Contracts.csproj", "{32A81BAC-2672-4FA3-BF23-8A5CA62BF18A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Contracts", "Users.Contracts\Users.Contracts.csproj", "{4980EA79-26A9-4D5D-859E-643C3AF1D5EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{32A81BAC-2672-4FA3-BF23-8A5CA62BF18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32A81BAC-2672-4FA3-BF23-8A5CA62BF18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32A81BAC-2672-4FA3-BF23-8A5CA62BF18A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4980EA79-26A9-4D5D-859E-643C3AF1D5EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4980EA79-26A9-4D5D-859E-643C3AF1D5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4980EA79-26A9-4D5D-859E-643C3AF1D5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4980EA79-26A9-4D5D-859E-643C3AF1D5EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{2DE0DB1B-D774-4E3E-B084-1BC85CA2351E} = {FA3F156E-249F-4AB0-9B2A-8C1E2839F50C}
 		{FCE35BB3-42B9-42EE-AD38-5EEE246E86F1} = {A9178A0E-9415-4A98-95F2-F3212F0AA92F}
 		{32A81BAC-2672-4FA3-BF23-8A5CA62BF18A} = {A9178A0E-9415-4A98-95F2-F3212F0AA92F}
+		{4980EA79-26A9-4D5D-859E-643C3AF1D5EF} = {EA9837AC-05B4-433C-BD73-55DED6D62B04}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC4A341-B489-48BE-8C7C-34BC0DAFB1B5}

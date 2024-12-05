@@ -25,6 +25,8 @@ public static class DependencyInjectionExtensions
 
     services.AddScoped<IApplicationUserRepository, EFApplicationUserRepository>();
 
+    services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
+
     mediatRAssemblies.Add(typeof(DependencyInjectionExtensions).Assembly);
 
     logger.Information("{Module} module services registered.", "Users");

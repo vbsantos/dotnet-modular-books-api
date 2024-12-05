@@ -21,7 +21,7 @@ internal class ListCartItemsQueryHandler : IRequestHandler<ListCartItemsQuery, R
       return Result.Unauthorized();
     }
 
-    return user.CartItems
+    var cartItems = user.CartItems
       .Select(item => new CartItemDto(
         Id: item.Id,
         Description: item.Description,
@@ -30,5 +30,7 @@ internal class ListCartItemsQueryHandler : IRequestHandler<ListCartItemsQuery, R
         Quantity: item.Quantity
       ))
       .ToList();
+
+    return cartItems;
   }
 }

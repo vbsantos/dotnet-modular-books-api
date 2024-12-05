@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Vini.ModularMonolith.Example.OrderProcessing.Data;
+using Vini.ModularMonolith.Example.OrderProcessing.Integrations;
 
 namespace Vini.ModularMonolith.Example.OrderProcessing;
 
@@ -19,7 +20,9 @@ public static class DependencyInjectionExtensions
     services.AddDbContext<OrderProcessingDbContext>(options =>
       options.UseSqlServer(connectionString)
     );
+
     services.AddScoped<IOrderRepository, EFOrderRepository>();
+    services.AddScoped<IOrderAddressCache, RedisOrderAddressCache>();
 
     mediatRAssemblies.Add(typeof(DependencyInjectionExtensions).Assembly);
 

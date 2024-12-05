@@ -62,14 +62,14 @@ Content-Type: application/json
 
 ###
 
-@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzI4MTkzNzYsIkVtYWlsQWRkcmVzcyI6InZic2FudHRvc0BnbWFpbC5jb20iLCJleHAiOjE3MzI4MjI5NzYsIm5iZiI6MTczMjgxOTM3Nn0.wVXVvbijsok1v6VidCkZ8wKX4SZ-D0Ccrvxru-ipzR0
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzM0MjM1OTgsIkVtYWlsQWRkcmVzcyI6InZic2FudHRvc0BnbWFpbC5jb20iLCJleHAiOjE3MzM0MjcxOTgsIm5iZiI6MTczMzQyMzU5OH0.AAUEG-q6Eket-U-u-KS1TakNUa10kdVWvA-4L7VESfY
 
 POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/cart
 Accept: text/plain
 Authorization: Bearer {{token}}
 Content-Type: application/json 
 {
-  "bookId": "bda13026-666e-425a-8cf2-5ceabfc8aea6",
+  "bookId": "17c61e41-3953-42cd-8f88-d3f698869b35",
   "quantity": 1
 }
 
@@ -95,8 +95,8 @@ Accept: application/json
 Authorization: Bearer {{token}}
 Content-Type: application/json 
 {
-  "billingAddress": "a827be92-0ffd-495d-aab7-b94c7d095f0f",
-  "shippingAddress": "a827be92-0ffd-495d-aab7-b94c7d095f0f"
+  "billingAddressId": "53d9bac5-2517-4ca3-b8d3-509736b10d4d",
+  "shippingAddressId": "53d9bac5-2517-4ca3-b8d3-509736b10d4d"
 }
 
 ###
@@ -114,12 +114,12 @@ Accept: application/json
 Authorization: Bearer {{token}}
 Content-Type: application/json 
 {
-  "street1": "123 Main St",
-  "street2": "Apt 4B",
-  "city": "Springfield",
-  "state": "IL",
-  "postalCode": "62701",
-  "country": "USA"
+  "street1": "Rua Floriano Peixoto",
+  "street2": "Apto 201",
+  "city": "Santa Maria",
+  "state": "RS",
+  "postalCode": "97010-100",
+  "country": "Brazil"
 }
 
 ###
