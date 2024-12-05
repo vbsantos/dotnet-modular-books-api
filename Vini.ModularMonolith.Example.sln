@@ -21,9 +21,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderProcessing Module", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Example.OrderProcessing", "Vini.ModularMonolith.Example.OrderProcessing\Vini.ModularMonolith.Example.OrderProcessing.csproj", "{FCE35BB3-42B9-42EE-AD38-5EEE246E86F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing.Contracts", "OrderProcessing.Contracts\OrderProcessing.Contracts.csproj", "{32A81BAC-2672-4FA3-BF23-8A5CA62BF18A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing.Contracts", "Vini.ModularMonolith.Example.OrderProcessing.Contracts\Vini.ModularMonolith.Example.OrderProcessing.Contracts.csproj", "{32A81BAC-2672-4FA3-BF23-8A5CA62BF18A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Contracts", "Users.Contracts\Users.Contracts.csproj", "{4980EA79-26A9-4D5D-859E-643C3AF1D5EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Contracts", "Vini.ModularMonolith.Example.Users.Contracts\Vini.ModularMonolith.Example.Users.Contracts.csproj", "{4980EA79-26A9-4D5D-859E-643C3AF1D5EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

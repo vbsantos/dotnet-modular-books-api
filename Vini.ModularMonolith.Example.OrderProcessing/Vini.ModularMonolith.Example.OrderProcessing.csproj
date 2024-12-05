@@ -21,8 +21,8 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\OrderProcessing.Contracts\OrderProcessing.Contracts.csproj" />
-    <ProjectReference Include="..\Users.Contracts\Users.Contracts.csproj" />
+    <ProjectReference Include="..\Vini.ModularMonolith.Example.OrderProcessing.Contracts\Vini.ModularMonolith.Example.OrderProcessing.Contracts.csproj" />
+    <ProjectReference Include="..\Vini.ModularMonolith.Example.Users.Contracts\Vini.ModularMonolith.Example.Users.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
