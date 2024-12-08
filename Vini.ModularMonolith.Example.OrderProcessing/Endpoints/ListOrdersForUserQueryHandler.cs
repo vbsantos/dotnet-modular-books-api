@@ -25,7 +25,7 @@ internal class ListOrdersForUserQueryHandler : IRequestHandler<ListOrdersForUser
       DateCreated = o.DateCreated,
       OrderId = o.Id,
       UserId = o.UserId,
-      Total = o.OrderItems.Sum(oi => oi.UnitPrice),
+      Total = o.OrderItems.Sum(oi => oi.UnitPrice * oi.Quantity),
     }).ToList();
 
     return summaries;
