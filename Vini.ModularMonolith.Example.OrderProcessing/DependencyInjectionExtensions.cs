@@ -22,7 +22,8 @@ public static class DependencyInjectionExtensions
     );
 
     services.AddScoped<IOrderRepository, EFOrderRepository>();
-    services.AddScoped<IOrderAddressCache, RedisOrderAddressCache>();
+    services.AddScoped<RedisOrderAddressCache>();
+    services.AddScoped<IOrderAddressCache, ReadThroughOrderAddressCache>();
 
     mediatRAssemblies.Add(typeof(DependencyInjectionExtensions).Assembly);
 

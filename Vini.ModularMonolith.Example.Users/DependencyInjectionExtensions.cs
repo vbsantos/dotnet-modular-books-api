@@ -24,6 +24,7 @@ public static class DependencyInjectionExtensions
       .AddEntityFrameworkStores<UsersDbContext>();
 
     services.AddScoped<IApplicationUserRepository, EFApplicationUserRepository>();
+    services.AddScoped<IReadOnlyUserStreetAddressRepository, EfUserStreetAddressRepository>();
 
     services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
 
