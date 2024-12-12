@@ -1,7 +1,7 @@
 ﻿using Ardalis.Result;
 using MediatR;
-using Users.Contracts;
 using Vini.ModularMonolith.Example.Users.Contracts;
+using Vini.ModularMonolith.Example.Users.Interfaces;
 
 namespace Vini.ModularMonolith.Example.Users.Integrations;
 

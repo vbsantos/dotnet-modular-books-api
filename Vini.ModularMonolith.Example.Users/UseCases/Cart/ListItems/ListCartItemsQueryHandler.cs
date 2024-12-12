@@ -1,5 +1,7 @@
 ﻿using Ardalis.Result;
 using MediatR;
+using Vini.ModularMonolith.Example.Users.CartEndpoints;
+using Vini.ModularMonolith.Example.Users.Interfaces;
 
 namespace Vini.ModularMonolith.Example.Users.UseCases.Cart.ListItems;
 

@@ -1,6 +1,7 @@
 ﻿using FastEndpoints;
 using FastEndpoints.Security;
 using Microsoft.AspNetCore.Identity;
+using Vini.ModularMonolith.Example.Users.Domain;
 
 namespace Vini.ModularMonolith.Example.Users.UserEndpoints;
 

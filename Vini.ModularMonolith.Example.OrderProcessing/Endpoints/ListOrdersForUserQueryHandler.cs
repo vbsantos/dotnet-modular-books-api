@@ -1,6 +1,6 @@
 ﻿using Ardalis.Result;
 using MediatR;
-using Vini.ModularMonolith.Example.OrderProcessing.Data;
+using Vini.ModularMonolith.Example.OrderProcessing.Interfaces;
 
 namespace Vini.ModularMonolith.Example.OrderProcessing.Endpoints;
 

@@ -1,4 +1,4 @@
-﻿namespace Users.Contracts;
+﻿namespace Vini.ModularMonolith.Example.Users.Contracts;
 
 public record UserAddressDetails(
   Guid UserId,

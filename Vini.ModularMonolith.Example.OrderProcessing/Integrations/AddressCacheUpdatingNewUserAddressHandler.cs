@@ -1,8 +1,10 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
-using Users.Contracts;
+using Vini.ModularMonolith.Example.OrderProcessing.Domain;
+using Vini.ModularMonolith.Example.OrderProcessing.Infrastructure.Data;
+using Vini.ModularMonolith.Example.Users.Contracts;
 
-namespace Vini.ModularMonolith.Example.OrderProcessing.Integrations;
+namespace Vini.ModularMonolith.Example.OrderProcessing.Interfaces;
 
 internal class AddressCacheUpdatingNewUserAddressHandler : INotificationHandler<NewUserAddressAddedIntegrationEvent>
 {

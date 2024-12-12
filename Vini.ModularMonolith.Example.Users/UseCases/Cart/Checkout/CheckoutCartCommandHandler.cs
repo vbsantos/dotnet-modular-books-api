@@ -1,6 +1,7 @@
 ﻿using Ardalis.Result;
 using MediatR;
 using OrderProcessing.Contracts;
+using Vini.ModularMonolith.Example.Users.Interfaces;
 
 namespace Vini.ModularMonolith.Example.Users.UseCases.Cart.Checkout;
 

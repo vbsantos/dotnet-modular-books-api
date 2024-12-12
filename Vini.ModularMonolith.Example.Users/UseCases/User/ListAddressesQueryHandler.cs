@@ -1,5 +1,6 @@
 ﻿using Ardalis.Result;
 using MediatR;
+using Vini.ModularMonolith.Example.Users.Interfaces;
 using Vini.ModularMonolith.Example.Users.UserEndpoints;
 
 namespace Vini.ModularMonolith.Example.Users.UseCases.User;

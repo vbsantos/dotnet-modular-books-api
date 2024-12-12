@@ -2,8 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
-using Vini.ModularMonolith.Example.OrderProcessing.Data;
-using Vini.ModularMonolith.Example.OrderProcessing.Integrations;
+using Vini.ModularMonolith.Example.OrderProcessing.Infrastructure;
+using Vini.ModularMonolith.Example.OrderProcessing.Infrastructure.Data;
+using Vini.ModularMonolith.Example.OrderProcessing.Interfaces;
 
 namespace Vini.ModularMonolith.Example.OrderProcessing;
 

@@ -1,6 +1,8 @@
 ﻿using Ardalis.Result;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using Vini.ModularMonolith.Example.Users.Domain;
+using Vini.ModularMonolith.Example.Users.Interfaces;
 
 namespace Vini.ModularMonolith.Example.Users.UseCases.User;
 internal class AddAddressToUserCommandHandler : IRequestHandler<AddAddressToUserCommand, Result>

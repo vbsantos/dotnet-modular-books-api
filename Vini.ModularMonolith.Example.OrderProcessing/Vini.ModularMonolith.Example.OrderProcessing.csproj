@@ -17,10 +17,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="Data\Migrations\" />
-  </ItemGroup>
-  
-  <ItemGroup>
     <ProjectReference Include="..\Vini.ModularMonolith.Example.OrderProcessing.Contracts\Vini.ModularMonolith.Example.OrderProcessing.Contracts.csproj" />
     <ProjectReference Include="..\Vini.ModularMonolith.Example.Users.Contracts\Vini.ModularMonolith.Example.Users.Contracts.csproj" />
   </ItemGroup>

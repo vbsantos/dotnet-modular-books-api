@@ -1,6 +1,8 @@
 ﻿using Ardalis.Result;
 using MediatR;
 using Vini.ModularMonolith.Example.Books.Contracts;
+using Vini.ModularMonolith.Example.Users.Domain;
+using Vini.ModularMonolith.Example.Users.Interfaces;
 
 namespace Vini.ModularMonolith.Example.Users.UseCases.Cart.AddItem;
 

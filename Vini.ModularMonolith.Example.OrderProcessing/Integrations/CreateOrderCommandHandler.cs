@@ -2,7 +2,8 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using OrderProcessing.Contracts;
-using Vini.ModularMonolith.Example.OrderProcessing.Data;
+using Vini.ModularMonolith.Example.OrderProcessing.Domain;
+using Vini.ModularMonolith.Example.OrderProcessing.Interfaces;
 
 namespace Vini.ModularMonolith.Example.OrderProcessing.Integrations;
 

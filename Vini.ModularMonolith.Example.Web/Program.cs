@@ -5,6 +5,7 @@ using Scalar.AspNetCore;
 using Serilog;
 using Vini.ModularMonolith.Example.Books;
 using Vini.ModularMonolith.Example.OrderProcessing;
+using Vini.ModularMonolith.Example.SharedKernel;
 using Vini.ModularMonolith.Example.Users;
 
 var logger = Log.Logger = new LoggerConfiguration()
@@ -30,8 +31,9 @@ var builder = WebApplication.CreateBuilder(args);
   builder.Services.AddUserModuleService(builder.Configuration, logger, mediatRAssemblies);
   builder.Services.AddOrderProcessingModuleService(builder.Configuration, logger, mediatRAssemblies);
 
-  // Set up MediatR
+  // Set up MediatR Domain Event Dispatcher
   builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies([.. mediatRAssemblies]));
+  builder.Services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
 }
 
 var app = builder.Build();

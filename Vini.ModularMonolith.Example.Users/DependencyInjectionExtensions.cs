@@ -2,7 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
-using Vini.ModularMonolith.Example.Users.Data;
+using Vini.ModularMonolith.Example.Users.Domain;
+using Vini.ModularMonolith.Example.Users.Infrastructure.Data;
+using Vini.ModularMonolith.Example.Users.Interfaces;
 
 namespace Vini.ModularMonolith.Example.Users;
 
@@ -25,8 +27,6 @@ public static class DependencyInjectionExtensions
 
     services.AddScoped<IApplicationUserRepository, EFApplicationUserRepository>();
     services.AddScoped<IReadOnlyUserStreetAddressRepository, EfUserStreetAddressRepository>();
-
-    services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
 
     mediatRAssemblies.Add(typeof(DependencyInjectionExtensions).Assembly);
 

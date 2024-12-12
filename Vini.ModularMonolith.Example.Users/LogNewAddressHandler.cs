@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
+using Vini.ModularMonolith.Example.Users.Domain;
 
 namespace Vini.ModularMonolith.Example.Users;
 
