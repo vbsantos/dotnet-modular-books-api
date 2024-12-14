@@ -1,5 +1,6 @@
 ﻿using System.Security.Claims;
 using Ardalis.Result;
+using Ardalis.Result.AspNetCore;
 using FastEndpoints;
 using MediatR;
 using Vini.ModularMonolith.Example.Users.UseCases.Cart.AddItem;
@@ -32,9 +33,14 @@ internal class AddItem : Endpoint<AddCartItemRequest>
     if (result.Status == ResultStatus.Unauthorized)
     {
       await SendUnauthorizedAsync(ct);
-      return;
     }
-
-    await SendOkAsync(ct);
+    else if (result.Status == ResultStatus.Invalid)
+    {
+      await SendResultAsync(result.ToMinimalApiResult());
+    }
+    else
+    {
+      await SendOkAsync(ct);
+    }
   }
 }

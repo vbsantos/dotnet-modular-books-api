@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Exampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Example.SharedKernel", "Vini.ModularMonolith.Example.SharedKernel\Vini.ModularMonolith.Example.SharedKernel.csproj", "{D8A8FB95-BAF3-40D1-A7EA-FEF142EFCFB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Example.OrderProcessing.Tests", "Vini.ModularMonolith.Example.OrderProcessing.Tests\Vini.ModularMonolith.Example.OrderProcessing.Tests.csproj", "{FC16EC6F-A34F-42E2-85DD-40D1E8B23B5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{D8A8FB95-BAF3-40D1-A7EA-FEF142EFCFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8A8FB95-BAF3-40D1-A7EA-FEF142EFCFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8A8FB95-BAF3-40D1-A7EA-FEF142EFCFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC16EC6F-A34F-42E2-85DD-40D1E8B23B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC16EC6F-A34F-42E2-85DD-40D1E8B23B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC16EC6F-A34F-42E2-85DD-40D1E8B23B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC16EC6F-A34F-42E2-85DD-40D1E8B23B5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{FCE35BB3-42B9-42EE-AD38-5EEE246E86F1} = {A9178A0E-9415-4A98-95F2-F3212F0AA92F}
 		{32A81BAC-2672-4FA3-BF23-8A5CA62BF18A} = {A9178A0E-9415-4A98-95F2-F3212F0AA92F}
 		{4980EA79-26A9-4D5D-859E-643C3AF1D5EF} = {EA9837AC-05B4-433C-BD73-55DED6D62B04}
+		{FC16EC6F-A34F-42E2-85DD-40D1E8B23B5A} = {A9178A0E-9415-4A98-95F2-F3212F0AA92F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC4A341-B489-48BE-8C7C-34BC0DAFB1B5}

@@ -4,11 +4,11 @@ using Vini.ModularMonolith.Example.Users.Interfaces;
 
 namespace Vini.ModularMonolith.Example.Users.Infrastructure.Data;
 
-internal class EfUserStreetAddressRepository : IReadOnlyUserStreetAddressRepository
+internal class EFUserStreetAddressRepository : IReadOnlyUserStreetAddressRepository
 {
   private readonly UsersDbContext _dbContext;
 
-  public EfUserStreetAddressRepository(UsersDbContext dbContext)
+  public EFUserStreetAddressRepository(UsersDbContext dbContext)
   {
     _dbContext = dbContext;
   }

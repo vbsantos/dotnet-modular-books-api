@@ -7,6 +7,7 @@ using Vini.ModularMonolith.Example.Books;
 using Vini.ModularMonolith.Example.OrderProcessing;
 using Vini.ModularMonolith.Example.SharedKernel;
 using Vini.ModularMonolith.Example.Users;
+using Vini.ModularMonolith.Example.Users.UseCases.Cart.AddItem;
 
 var logger = Log.Logger = new LoggerConfiguration()
   .Enrich.FromLogContext()
@@ -33,6 +34,10 @@ var builder = WebApplication.CreateBuilder(args);
 
   // Set up MediatR Domain Event Dispatcher
   builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies([.. mediatRAssemblies]));
+  builder.Services.AddMediatRLoggingBehavior();
+  builder.Services.AddMediatRFluentValidationBehavior();
+  builder.Services.AddValidatorsFromAssemblyContaining<AddItemToCartCommandValidator>();
+  // Add MediatR Domain Event Dispatcher
   builder.Services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
 }
 
