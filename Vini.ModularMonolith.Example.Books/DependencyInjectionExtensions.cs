@@ -8,7 +8,7 @@ namespace Vini.ModularMonolith.Example.Books;
 
 public static class DependencyInjectionExtensions
 {
-  public static IServiceCollection AddBookModuleService(
+  public static IServiceCollection AddBookModuleServices(
     this IServiceCollection services,
     ConfigurationManager config,
     ILogger logger,

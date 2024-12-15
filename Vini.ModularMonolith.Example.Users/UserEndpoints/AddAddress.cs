@@ -2,7 +2,7 @@
 using Ardalis.Result;
 using FastEndpoints;
 using MediatR;
-using Vini.ModularMonolith.Example.Users.UseCases.User;
+using Vini.ModularMonolith.Example.Users.UseCases.User.AddAddress;
 
 namespace Vini.ModularMonolith.Example.Users.UserEndpoints;
 

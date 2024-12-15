@@ -10,7 +10,7 @@ namespace Vini.ModularMonolith.Example.OrderProcessing;
 
 public static class DependencyInjectionExtensions
 {
-  public static IServiceCollection AddOrderProcessingModuleService(
+  public static IServiceCollection AddOrderProcessingModuleServices(
     this IServiceCollection services,
     ConfigurationManager config,
     ILogger logger,

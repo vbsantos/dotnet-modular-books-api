@@ -10,7 +10,7 @@ namespace Vini.ModularMonolith.Example.Users;
 
 public static class DependencyInjectionExtensions
 {
-  public static IServiceCollection AddUserModuleService(
+  public static IServiceCollection AddUserModuleServices(
     this IServiceCollection services,
     ConfigurationManager config,
     ILogger logger,

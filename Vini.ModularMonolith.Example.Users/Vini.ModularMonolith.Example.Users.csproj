@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Vini.ModularMonolith.Example.EmailSending.Contracts\Vini.ModularMonolith.Example.EmailSending.Contracts.csproj" />
     <ProjectReference Include="..\Vini.ModularMonolith.Example.OrderProcessing.Contracts\Vini.ModularMonolith.Example.OrderProcessing.Contracts.csproj" />
     <ProjectReference Include="..\Vini.ModularMonolith.Example.SharedKernel\Vini.ModularMonolith.Example.SharedKernel.csproj" />
     <ProjectReference Include="..\Vini.ModularMonolith.Example.Users.Contracts\Vini.ModularMonolith.Example.Users.Contracts.csproj" />

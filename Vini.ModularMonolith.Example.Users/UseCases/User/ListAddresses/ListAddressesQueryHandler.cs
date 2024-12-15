@@ -3,7 +3,7 @@ using MediatR;
 using Vini.ModularMonolith.Example.Users.Interfaces;
 using Vini.ModularMonolith.Example.Users.UserEndpoints;
 
-namespace Vini.ModularMonolith.Example.Users.UseCases.User;
+namespace Vini.ModularMonolith.Example.Users.UseCases.User.ListAddresses;
 
 internal record ListAddressesQueryHandler : IRequestHandler<ListAddressesQuery, Result<List<UserAddressDto>>>
 {

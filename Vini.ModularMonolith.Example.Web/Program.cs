@@ -4,6 +4,7 @@ using FastEndpoints.Security;
 using Scalar.AspNetCore;
 using Serilog;
 using Vini.ModularMonolith.Example.Books;
+using Vini.ModularMonolith.Example.EmailSending;
 using Vini.ModularMonolith.Example.OrderProcessing;
 using Vini.ModularMonolith.Example.SharedKernel;
 using Vini.ModularMonolith.Example.Users;
@@ -28,9 +29,10 @@ var builder = WebApplication.CreateBuilder(args);
 
   // Module Services
   List<Assembly> mediatRAssemblies = [typeof(Program).Assembly];
-  builder.Services.AddBookModuleService(builder.Configuration, logger, mediatRAssemblies);
-  builder.Services.AddUserModuleService(builder.Configuration, logger, mediatRAssemblies);
-  builder.Services.AddOrderProcessingModuleService(builder.Configuration, logger, mediatRAssemblies);
+  builder.Services.AddBookModuleServices(builder.Configuration, logger, mediatRAssemblies);
+  builder.Services.AddEmailSendingModuleServices(builder.Configuration, logger, mediatRAssemblies);
+  builder.Services.AddUserModuleServices(builder.Configuration, logger, mediatRAssemblies);
+  builder.Services.AddOrderProcessingModuleServices(builder.Configuration, logger, mediatRAssemblies);
 
   // Set up MediatR Domain Event Dispatcher
   builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies([.. mediatRAssemblies]));

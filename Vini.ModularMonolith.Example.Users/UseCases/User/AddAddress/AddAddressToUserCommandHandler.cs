@@ -4,7 +4,8 @@ using Microsoft.Extensions.Logging;
 using Vini.ModularMonolith.Example.Users.Domain;
 using Vini.ModularMonolith.Example.Users.Interfaces;
 
-namespace Vini.ModularMonolith.Example.Users.UseCases.User;
+namespace Vini.ModularMonolith.Example.Users.UseCases.User.AddAddress;
+
 internal class AddAddressToUserCommandHandler : IRequestHandler<AddAddressToUserCommand, Result>
 {
   private readonly IApplicationUserRepository _userRepository;

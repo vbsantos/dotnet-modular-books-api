@@ -1,7 +1,7 @@
 ﻿using Ardalis.Result;
 using MediatR;
 
-namespace Vini.ModularMonolith.Example.Users.UseCases.User;
+namespace Vini.ModularMonolith.Example.Users.UseCases.User.AddAddress;
 
 public record AddAddressToUserCommand(
   string EmailAddress,
