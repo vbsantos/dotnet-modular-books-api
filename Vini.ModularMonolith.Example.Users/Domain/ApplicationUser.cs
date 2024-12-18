@@ -14,12 +14,16 @@ public class ApplicationUser : IdentityUser, IHaveDomainEvents
   private readonly List<UserStreetAddress> _addresses = [];
   public IReadOnlyCollection<UserStreetAddress> Addresses => _addresses.AsReadOnly();
 
+  #region DomainEvent
+
   private List<DomainEventBase> _domainEvents = [];
   [NotMapped]
   public IEnumerable<DomainEventBase> DomainEvents => _domainEvents.AsReadOnly();
 
   protected void RegisterDomainEvents(DomainEventBase domainEvent) => _domainEvents.Add(domainEvent);
   void IHaveDomainEvents.ClearDomainEvents() => _domainEvents.Clear();
+
+  #endregion
 
   public void AddItemToCart(CartItem item)
   {

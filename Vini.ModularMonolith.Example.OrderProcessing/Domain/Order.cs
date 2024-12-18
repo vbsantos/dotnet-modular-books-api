@@ -1,6 +1,9 @@
-﻿namespace Vini.ModularMonolith.Example.OrderProcessing.Domain;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Vini.ModularMonolith.Example.SharedKernel;
 
-internal class Order
+namespace Vini.ModularMonolith.Example.OrderProcessing.Domain;
+
+internal class Order : IHaveDomainEvents
 {
   public Guid Id { get; private set; } = Guid.NewGuid();
   public Guid UserId { get; private set; }
@@ -12,6 +15,17 @@ internal class Order
   public DateTimeOffset DateCreated { get; private set; } = DateTimeOffset.Now;
 
   private void AddOrderItem(OrderItem item) => _orderItems.Add(item);
+
+  #region DomainEvent
+
+  private List<DomainEventBase> _domainEvents = [];
+  [NotMapped]
+  public IEnumerable<DomainEventBase> DomainEvents => _domainEvents.AsReadOnly();
+
+  protected void RegisterDomainEvents(DomainEventBase domainEvent) => _domainEvents.Add(domainEvent);
+  void IHaveDomainEvents.ClearDomainEvents() => _domainEvents.Clear();
+
+  #endregion
 
   internal class Factory
   {
@@ -29,6 +43,10 @@ internal class Order
       {
         order.AddOrderItem(item);
       }
+
+      var createdEvent = new OrderCreatedEvent(order);
+      order.RegisterDomainEvents(createdEvent);
+
       return order;
     }
   }
