@@ -12,7 +12,15 @@ This is a learning project aimed at understanding the principles and implementat
 - [MediatR](https://github.com/jbogard/MediatR): Simple mediator pattern implementation in .NET
 - [Ardalis.Result](https://github.com/ardalis/Result): A library for handling operation results
 - [Ardalis.GuardClauses](https://github.com/ardalis/GuardClauses): A library for guard clauses
- 
+- [MimeKit](https://github.com/jstedfast/MimeKit): To Send Emails - Multipurpose Internet Mail Extension (MIME)
+
+## External Services
+
+- [MSSQL](https://www.microsoft.com/en-us/sql-server): A relational database - Used for the modules main databases
+- [Redis](https://redis.io/): An in-memory data structure store - Used for the Materialized View Pattern
+- [MongoDB](https://www.mongodb.com/): A NoSQL database - Used in the Outbox Pattern
+- [Papercut](https://www.papercut-smtp.com/): A Simple Desktop Email Server - Used for testing
+
 ## Modules
 
 ### Books
