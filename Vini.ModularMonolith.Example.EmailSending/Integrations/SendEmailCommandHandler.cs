@@ -1,10 +1,9 @@
 ﻿using Ardalis.Result;
-using MediatR;
 using Vini.ModularMonolith.Example.EmailSending.Contracts;
 
 namespace Vini.ModularMonolith.Example.EmailSending.Integrations;
 
-internal class SendEmailCommandHandler : IRequestHandler<SendEmailCommand, Result<Guid>>
+internal class SendEmailCommandHandler //: IRequestHandler<SendEmailCommand, Result<Guid>>
 {
   private readonly ISendEmail _emailSender;
 
@@ -13,7 +12,7 @@ internal class SendEmailCommandHandler : IRequestHandler<SendEmailCommand, Resul
     _emailSender = emailSender;
   }
 
-  public async Task<Result<Guid>> Handle(SendEmailCommand request, CancellationToken ct)
+  public async Task<Result<Guid>> HandleAsync(SendEmailCommand request, CancellationToken ct)
   {
     await _emailSender.SendEmailAsync(request.To, request.From, request.Subject, request.Body);
 

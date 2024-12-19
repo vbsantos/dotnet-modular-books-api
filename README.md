@@ -64,3 +64,16 @@ To run the migrations
 ```bash
 dotnet ef database update --context OrderProcessingDbContext
 ```
+
+### EmailSending
+
+To run papercut as a container, run this command:
+```bash
+docker run --name modular-monolith-papercut -d -p 25:25 -p 37408:37408 jijiechen/papercut:latest
+```
+
+To run MongoDB as a container, run this command:
+
+```bash
+docker run --name modular-monolith-mongo -d -p 27017:27017 mongo
+```

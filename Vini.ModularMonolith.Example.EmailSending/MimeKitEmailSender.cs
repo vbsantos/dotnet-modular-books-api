@@ -17,19 +17,18 @@ public class MimeKitEmailSender : ISendEmail
   {
     _logger.LogInformation("Attempting to send email to {to} from {from} with subject {subject} and body {body}", to, from, subject, body);
 
-    using (var client = new SmtpClient()) // use localhost and a test server
-    {
-      client.Connect(Constants.EMAIL_SERVER, 25, false); // TODO: fetch from config
-      var message = new MimeMessage();
-      message.From.Add(new MailboxAddress(from, from));
-      message.To.Add(new MailboxAddress(to, to));
-      message.Subject = subject;
-      message.Body = new TextPart("plain") { Text = body };
+    using var client = new SmtpClient(); // use localhost and a test server
+    await client.ConnectAsync(Constants.EMAIL_SERVER, 25, false); // TODO: fetch from config
 
-      await client.SendAsync(message);
-      _logger.LogInformation("Email sent!");
+    var message = new MimeMessage();
+    message.From.Add(new MailboxAddress(from, from));
+    message.To.Add(new MailboxAddress(to, to));
+    message.Subject = subject;
+    message.Body = new TextPart("plain") { Text = body };
 
-      client.Disconnect(true);
-    }
+    await client.SendAsync(message);
+    _logger.LogInformation("Email sent!");
+
+    await client.DisconnectAsync(false);
   }
 }
