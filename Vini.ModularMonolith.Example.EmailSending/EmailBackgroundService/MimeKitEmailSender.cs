@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using MimeKit;
 
-namespace Vini.ModularMonolith.Example.EmailSending;
+namespace Vini.ModularMonolith.Example.EmailSending.EmailBackgroundService;
 
 public class MimeKitEmailSender : ISendEmail
 {

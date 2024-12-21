@@ -1,5 +1,6 @@
 ﻿using Ardalis.Result;
 using Vini.ModularMonolith.Example.EmailSending.Contracts;
+using Vini.ModularMonolith.Example.EmailSending.EmailBackgroundService;
 
 namespace Vini.ModularMonolith.Example.EmailSending.Integrations;
 

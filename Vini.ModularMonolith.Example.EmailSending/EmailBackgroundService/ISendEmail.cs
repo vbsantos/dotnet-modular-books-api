@@ -1,4 +1,4 @@
-﻿namespace Vini.ModularMonolith.Example.EmailSending;
+﻿namespace Vini.ModularMonolith.Example.EmailSending.EmailBackgroundService;
 
 internal interface ISendEmail
 {

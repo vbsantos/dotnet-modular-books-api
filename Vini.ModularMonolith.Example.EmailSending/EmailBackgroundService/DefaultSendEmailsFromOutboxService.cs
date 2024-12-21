@@ -2,18 +2,49 @@
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 
-namespace Vini.ModularMonolith.Example.EmailSending;
+namespace Vini.ModularMonolith.Example.EmailSending.EmailBackgroundService;
+
+internal interface IGetEmailsFromOutboxService
+{
+  Task<Result<EmailOutboxEntity>> GetUnprocessedEmailEntity();
+}
+
+internal class MongoDbGetEmailsFromOutboxService : IGetEmailsFromOutboxService
+{
+  private readonly IMongoCollection<EmailOutboxEntity> _emailCollection;
+
+  public MongoDbGetEmailsFromOutboxService(IMongoCollection<EmailOutboxEntity> emailCollection)
+  {
+    _emailCollection = emailCollection;
+  }
+
+  public async Task<Result<EmailOutboxEntity>> GetUnprocessedEmailEntity()
+  {
+    var filter = Builders<EmailOutboxEntity>.Filter
+      .Eq(e => e.DateTimeUtcProcessed, null);
+
+    var unsentEmailEntity = await _emailCollection.Find(filter)
+      .FirstOrDefaultAsync();
+
+    if (unsentEmailEntity is null)
+    {
+      return Result.NotFound();
+    }
+
+    return unsentEmailEntity;
+  }
+}
 
 internal class DefaultSendEmailsFromOutboxService : ISendEmailsFromOutboxService
 {
-  private readonly IOutboxService _outboxService;
+  private readonly IGetEmailsFromOutboxService _outboxService;
   private readonly ISendEmail _emailSender;
   // TODO: If it was production code it would probably be behind a repository instead
   private readonly IMongoCollection<EmailOutboxEntity> _emailCollection;
   private readonly ILogger<DefaultSendEmailsFromOutboxService> _logger;
 
   public DefaultSendEmailsFromOutboxService(
-    IOutboxService outboxService,
+    IGetEmailsFromOutboxService outboxService,
     ISendEmail emailSender,
     IMongoCollection<EmailOutboxEntity> emailCollection,
     ILogger<DefaultSendEmailsFromOutboxService> logger)
@@ -24,7 +55,7 @@ internal class DefaultSendEmailsFromOutboxService : ISendEmailsFromOutboxService
     _logger = logger;
   }
 
-  public async Task CheckForAndSendEmails()
+  public async Task CheckForAndSendEmailsAsync()
   {
     try
     {

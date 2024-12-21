@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Vini.ModularMonolith.Example.EmailSending;
+namespace Vini.ModularMonolith.Example.EmailSending.EmailBackgroundService;
 
 // TODO: everything that is not integration should be "internal" in this modular architecture
 internal class EmailSendingBackgroundService : BackgroundService
@@ -26,7 +26,7 @@ internal class EmailSendingBackgroundService : BackgroundService
     {
       try
       {
-        await _sendEmailsFromOutboxService.CheckForAndSendEmails();
+        await _sendEmailsFromOutboxService.CheckForAndSendEmailsAsync();
       }
       catch (Exception ex)
       {

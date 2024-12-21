@@ -2,6 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 using Serilog;
+using Vini.ModularMonolith.Example.EmailSending.EmailBackgroundService;
+using Vini.ModularMonolith.Example.EmailSending.Integrations;
 
 namespace Vini.ModularMonolith.Example.EmailSending;
 
@@ -19,7 +21,8 @@ public static class DependencyInjectionExtensions
 
     // Add module services
     services.AddTransient<ISendEmail, MimeKitEmailSender>();
-    services.AddTransient<IOutboxService, MongoDbOutboxService>();
+    services.AddTransient<IQueueEmailsInOutboxService, MongoDbQueueEmailOutboxService>();
+    services.AddTransient<IGetEmailsFromOutboxService, MongoDbGetEmailsFromOutboxService>();
     services.AddTransient<ISendEmailsFromOutboxService, DefaultSendEmailsFromOutboxService>();
 
     // if using MediatR in this module, add any assemblies that contain handlers to the list
