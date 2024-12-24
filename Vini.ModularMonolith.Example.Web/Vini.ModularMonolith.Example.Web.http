@@ -1,18 +1,21 @@
-@Vini.ModularMonolith.Example.Web_HostAddress = https://localhost:7018
+@HostAddress = https://localhost:7018
 
-GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/books/
+# GET ALL BOOKS
+GET {{HostAddress}}/books/
 Accept: application/json
 
 ###
 
 @BookId = e4fa19bf-6981-4e50-a542-7c9b26e9ec31
 
-GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/books/{{BookId}}
+# GET BOOK BY ID
+GET {{HostAddress}}/books/{{BookId}}
 Accept: application/json
 
 ###
 
-POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/books
+# ADD BOOK
+POST {{HostAddress}}/books
 Accept: application/json
 Content-Type: application/json
 
@@ -25,12 +28,14 @@ Content-Type: application/json
 
 ###
 
-DELETE {{Vini.ModularMonolith.Example.Web_HostAddress}}/books/bda13026-666e-425a-8cf2-5ceabfc8aea6
+# DELETE BOOK BY ID
+DELETE {{HostAddress}}/books/bda13026-666e-425a-8cf2-5ceabfc8aea6
 Accept: application/json
 
 ###
 
-POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/books/bda13026-666e-425a-8cf2-5ceabfc8aea6/pricehistory
+# UPDATE BOOK PRICE HISTORY
+POST {{HostAddress}}/books/bda13026-666e-425a-8cf2-5ceabfc8aea6/pricehistory
 Accept: application/json
 Content-Type: application/json
 
@@ -40,76 +45,80 @@ Content-Type: application/json
 
 ###
 
-POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/users
+# REGISTERS A NEW USER
+POST {{HostAddress}}/users
 Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "vbsanttos@gmail.com",
+  "email": "vbsanttos5@gmail.com",
+  "password": "Pass@word1"
+}
+
+### 
+
+# LOGS IN A USER
+POST {{HostAddress}}/users/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "vbsanttos5@gmail.com",
   "password": "Pass@word1"
 }
 
 ###
 
-POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/users/login
-Accept: application/json
-Content-Type: application/json
+@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzUwNjg4MDksIkVtYWlsQWRkcmVzcyI6InZic2FudHRvczVAZ21haWwuY29tIiwiZXhwIjoxNzM1MDcyNDA5LCJuYmYiOjE3MzUwNjg4MDl9.Khxijm4j7r_z-5jza-_0y7wyqSD9l99Z8E1L3dAv84Q
 
-{
-  "email": "vbsanttos@gmail.com",
-  "password": "Pass@word1"
-}
-
-###
-
-@token = eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzM2OTA0MTUsIkVtYWlsQWRkcmVzcyI6InZic2FudHRvc0BnbWFpbC5jb20iLCJleHAiOjE3MzM2OTQwMTUsIm5iZiI6MTczMzY5MDQxNX0.cZ44kzXLPQTy8qp8U0luuRYXFdXV5ipzMPoCE4Tzb9g
-
-POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/cart
+# ADD TO CART
+POST {{HostAddress}}/cart
 Accept: text/plain
 Authorization: Bearer {{token}}
 Content-Type: application/json 
 {
-  "bookId": "e4fa19bf-6981-4e50-a542-7c9b26e9ec31",
-  "quantity": 1
+  "bookId": "bda13026-666e-425a-8cf2-5ceabfc8aea6",
+  "quantity": 5
 }
 
 ###
 
-GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/cart
+# GET CART ITEMS
+GET {{HostAddress}}/cart
 Accept: application/json
 Authorization: Bearer {{token}}
 
 ###
 
-# List All Orders
-GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/orders
+# LIST ALL ORDERS
+GET {{HostAddress}}/orders
 Accept: application/json
 Authorization: Bearer {{token}}
 Content-Type: application/json
 
 ###
 
-# Checkout Cart
-POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/cart/checkout
+# CHECKOUT CART
+POST {{HostAddress}}/cart/checkout
 Accept: application/json 
 Authorization: Bearer {{token}}
 Content-Type: application/json 
 {
-  "billingAddressId": "53d9bac5-2517-4ca3-b8d3-509736b10d4d",
-  "shippingAddressId": "53d9bac5-2517-4ca3-b8d3-509736b10d4d"
+  "billingAddressId": "d4449872-86a9-441e-8465-18a9965fd907",
+  "shippingAddressId": "d4449872-86a9-441e-8465-18a9965fd907"
 }
 
 ###
 
-# List Addresses
-GET {{Vini.ModularMonolith.Example.Web_HostAddress}}/users/addresses
+# LIST ADDRESSES
+GET {{HostAddress}}/users/addresses
 Accept: application/json
 Authorization: Bearer {{token}}
 
 ###
 
-# Add Address To User
-POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/users/addresses
+# ADD ADDRESS TO USER
+POST {{HostAddress}}/users/addresses
 Accept: application/json 
 Authorization: Bearer {{token}}
 Content-Type: application/json 
@@ -125,11 +134,22 @@ Content-Type: application/json
 ###
 
 # FLUSH CACHE
-
-POST {{Vini.ModularMonolith.Example.Web_HostAddress}}/flushcache
+POST {{HostAddress}}/flushcache
 Accept: application/json
 Content-Type: application/json
 {
 }
+
+###
+
+# TOP SALES - REACH IN REPORTING (ANTI-PATTERN)
+GET {{HostAddress}}/topsales?month=12&year=2024
+Accept: application/json
+
+###
+
+# TOP SALES - EVENT INGESTION CUSTOM DB
+GET {{HostAddress}}/topsales2?month=12&year=2024
+Accept: application/json
 
 ###
