@@ -98,3 +98,11 @@ docker run --name modular-monolith-mongo -d -p 27017:27017 mongo
 ### Reporting
 
 This module has an event ingestion system that saves the necessary report data in a dedicated database.
+
+### Shared Kernel
+
+This module houses cross-cutting concerns and shared functionalities used by multiple modules within the system, like:
+- MediatR Behaviors: These are pipeline behaviors that can encapsulate logic such as:
+    - Logging: Using tools like Serilog to log request handling, performance metrics, or errors in a centralized manner.
+    - Validation: Implementing validation logic using FluentValidation, ensuring requests are pre-validated before reaching their handlers.
+- Domain Events: These are events that are raised within the domain and can be handled by other modules (or external systems).
