@@ -6,6 +6,7 @@ using Serilog;
 using Vini.ModularMonolith.Example.Books;
 using Vini.ModularMonolith.Example.EmailSending;
 using Vini.ModularMonolith.Example.OrderProcessing;
+using Vini.ModularMonolith.Example.Reporting;
 using Vini.ModularMonolith.Example.SharedKernel;
 using Vini.ModularMonolith.Example.Users;
 using Vini.ModularMonolith.Example.Users.UseCases.Cart.AddItem;
@@ -33,6 +34,7 @@ var builder = WebApplication.CreateBuilder(args);
   builder.Services.AddEmailSendingModuleServices(builder.Configuration, logger, mediatRAssemblies);
   builder.Services.AddUserModuleServices(builder.Configuration, logger, mediatRAssemblies);
   builder.Services.AddOrderProcessingModuleServices(builder.Configuration, logger, mediatRAssemblies);
+  builder.Services.AddReportingModuleServices(builder.Configuration, logger, mediatRAssemblies);
 
   // Set up MediatR Domain Event Dispatcher
   builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies([.. mediatRAssemblies]));

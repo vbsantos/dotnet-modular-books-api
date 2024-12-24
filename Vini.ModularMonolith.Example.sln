@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Exampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Example.EmailSending.Contracts", "Vini.ModularMonolith.Example.EmailSending.Contracts\Vini.ModularMonolith.Example.EmailSending.Contracts.csproj", "{DF84E636-A2A7-4FFB-87A1-607E90AB0389}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reporting Module", "Reporting Module", "{FB6D5889-1194-4D90-AF4A-92E91F418D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vini.ModularMonolith.Example.Reporting", "Vini.ModularMonolith.Example.Reporting\Vini.ModularMonolith.Example.Reporting.csproj", "{69848DC1-F95D-4A49-ADDE-D92815F95A29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +93,10 @@ Global
 		{DF84E636-A2A7-4FFB-87A1-607E90AB0389}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF84E636-A2A7-4FFB-87A1-607E90AB0389}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF84E636-A2A7-4FFB-87A1-607E90AB0389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69848DC1-F95D-4A49-ADDE-D92815F95A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69848DC1-F95D-4A49-ADDE-D92815F95A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69848DC1-F95D-4A49-ADDE-D92815F95A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69848DC1-F95D-4A49-ADDE-D92815F95A29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +112,7 @@ Global
 		{FC16EC6F-A34F-42E2-85DD-40D1E8B23B5A} = {A9178A0E-9415-4A98-95F2-F3212F0AA92F}
 		{703E374D-3755-4B1E-9C80-3A15F0C7D261} = {6FCA2700-58DE-484B-B1E7-731BCB2E451F}
 		{DF84E636-A2A7-4FFB-87A1-607E90AB0389} = {6FCA2700-58DE-484B-B1E7-731BCB2E451F}
+		{69848DC1-F95D-4A49-ADDE-D92815F95A29} = {FB6D5889-1194-4D90-AF4A-92E91F418D57}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DC4A341-B489-48BE-8C7C-34BC0DAFB1B5}
